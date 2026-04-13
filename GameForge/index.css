@@ -1,0 +1,138 @@
+body {background-color: rgb(0, 0, 0);}
+body {
+  color: rgb(255, 251, 251);
+}
+.content{
+    margin-left: 100px;
+
+}
+.game-cover-r{
+    display: block;
+    margin-top: 20px;
+    border-radius: 25px;
+    transition: opacity 0.3s ease;
+    width: 800px;
+    height: 450px;
+    object-fit: cover; 
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.footer{
+   
+    position:fixed;
+    
+    bottom: 0px;
+    left:20px;
+}
+.about-link{
+    color:white;
+     text-decoration: none;
+     display :flex;
+     font-family: cascadia code, monospace;
+     align-items: center;
+     gap: 6px
+}
+.info-icon{
+    color: rgb(255, 251, 251);
+    border-radius: 50%;
+    border:2px solid white;
+    width: 20px;
+    height: 20px;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    gap : 20px;
+    border-radius: 8px;
+
+}
+.main-content{
+    display: flex;
+    gap: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.side-game{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.img-column{
+    border-radius: 8px;
+    width: 100px;      /* fixed width */
+    height: 120px;     /* rectangular shape */
+    object-fit: cover; /* crops nicely */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    
+    
+}
+.groupbuttons{
+    display: flex;
+    margin-bottom: -20px;
+    margin-top: 20px;
+    
+    align-items: center;
+
+
+   
+}
+
+.buy-button{
+    background-color: #1a2b27;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buy-button:hover {
+    background-color: #3cbacd;
+    color: black;   
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    fade: 0.5;
+   
+    border-radius: 50%;
+    z-index: 10;
+    padding : 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.left {
+    left: 20px;
+}
+.right {
+    right: 20px;
+}
+.content {
+    position: relative;
+}
+.side-game img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.side-game:hover img {
+    transform: scale(1.05);
+}

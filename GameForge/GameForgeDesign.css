@@ -1,0 +1,184 @@
+/* Body - full screen flex center */
+body {
+    margin: 0;
+    
+    background: radial-gradient(ellipse at center, #3d1f6e 0%, #2a1650 40%, #1a0d3d 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#login-container {
+    display: grid;
+    place-items: center; /* centers both vertically and horizontally */
+    min-height: 100vh; /* full viewport height */
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    animation: slideFadeIn 1s ease-out;
+    margin-top: -150px;
+
+    
+
+}
+#signup-container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; /* use min-height instead */
+    width: 100%; /* let container span full width */
+    text-align: center;
+    z-index: 1;
+    animation: slideFadeIn 1s ease-out;
+    
+    
+}
+/* Login card */
+#login-card {
+    padding: 35px 30px;
+    background-color: #1b2838;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(102,192,244,0.7); /* soft glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 500px;
+}
+
+#login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(102,192,244,0.9);
+}
+#aboutus-container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; /* use min-height instead */
+    width: 100%; /* let container span full width */
+    text-align: center;
+    z-index: 1;
+    animation: slideFadeIn 1s ease-out;
+    
+    
+}
+/* About Us card */
+#aboutus-card {
+    padding: 35px 30px;
+    background-color: #1b2838;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(102,192,244,0.7); /* soft glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 1000px;
+}
+
+#aboutus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(102,192,244,0.9);
+}
+/* Heading */
+#heading1 {
+    color: #66c0f4;
+    text-shadow: 0 0 15px #66c0f4; /* neon glow effect */
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+#login-header {
+    margin-bottom: -200px;
+    margin-top: 20px;
+}
+#signup-header {
+   
+}
+
+/* Form groups */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    display: block;
+    color: #c7d5e0;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #2a475e;
+    background-color: #2a475e;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #66c0f4;
+}
+
+/* Login button */
+.log-but{ 
+    width: 70%;
+    padding: 12px;
+    background-color: #66c0f4;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+button:hover {
+    background: #9b59b6;
+    transform: translateY(-2px);
+}
+
+
+#back-login-button:hover {
+    background-color: #9b59b6;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(155,89,182,0.9);
+}
+#login-card{
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#aboutus-button {
+    position: fixed;
+    bottom: 20px;  /* 20px from bottom */
+    right: 20px;   /* 20px from right */
+    padding: 10px 20px;
+    background-color: #66c0f4;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 1001; /* on top of other elements */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(102,192,244,0.7);
+}
+
+#aboutus-button:hover {
+    background-color: #9b59b6;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(155,89,182,0.9);
+}
+
+/* Fade-in animation */
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
