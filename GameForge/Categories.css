@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+.Game-card{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    transition:0.3s ease;
+
+    
+}
+
+.Game-card img{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    gap: 30px;
+}
+.Game-card .Game-title{
+    font-size: 20px;
+    font-weight: bold;
+      margin-top: 1px;
+      align-items: center;
+  
+   font-family: 'Orbitron',sans-serif;
+}
+.Game-card :hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.Game-card:hover img {
+    transform: scale(1.05);
+}
+.Game-card:hover .Game-title {
+    color: #3cbacd;
+    transition: color 0.3s ease;
+    transform : scale(1.05);
+}
+.game-categories{
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+            gap: 30px;
+    padding: 20px;
+    
+}
+
+.buttons{
+    background-color: rgba(217, 217, 217, 0.281);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+    opacity: 0;
+    transition : opacity 0.3s ease;
+    transform : translateY(-10px);
+
+
+   
+}
+.Game-card:hover .buttons{
+    display: flex;
+    opacity: 1;
+
+    transition: opacity 0.4s;
+    
+}
+
+.buy-button{
+    background-color: #1a2b27;
+    border: none;
+    color: white;
+       padding: 8px 12px;
+    border-radius: 4px;
+    margin-left: 140px;
+  
+ 
+    cursor: pointer;
+}
+.buy-button:hover {
+    background-color: #3cbacd;
+    color: black;   
+}
+.Genres{
+    display: flex;
+    align-self: auto;
+    flex-direction: row;
+    align-items: center;
+       font-family: 'Orbitron',sans-serif;
+          font-family: 'Orbitron',sans-serif;
+    
+    
+    gap: 30px;
+    
+}
+a.G{
+    margin-top: 30px;
+    margin-left: auto;
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: color 0.3s ease;
+    align-items: center;
+ 
+}
+a.G:hover {
+    color: #3cbacd;
+}

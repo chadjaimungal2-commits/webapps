@@ -20,7 +20,9 @@ CREATE Table Employee(
     HireDate DATE,
     Name VARCHAR(100) NOT NULL,
     ContactNumber VARCHAR(20),
-    Email VARCHAR(100)
+    Email VARCHAR(100),
+    role VARCHAR(50)Default 'Employee'
+
 );
 
 -- Game Table

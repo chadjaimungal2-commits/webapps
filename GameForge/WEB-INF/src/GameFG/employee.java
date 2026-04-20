@@ -1,5 +1,5 @@
 package GameFG;
-public class Employee {
+public class employee {
     private String employeeID;
     private String HireDate;
     private String employeeName;
@@ -7,7 +7,7 @@ public class Employee {
     private String employeeEmail;
     private String employeePassword;
 
-    public Employee(String employeeID, String HireDate, String employeeName, String ContactNumber, String employeeEmail, String employeePassword) {
+    public employee(String employeeID, String HireDate, String employeeName, String ContactNumber, String employeeEmail, String employeePassword) {
         this.employeeID = employeeID;
         this.HireDate = HireDate;
         this.employeeName = employeeName;
@@ -17,7 +17,7 @@ public class Employee {
         this.employeePassword = employeePassword;
     }
 
-    public String getEmployeeID() {
+    public String getemployeeID() {
         return employeeID;
     }
 

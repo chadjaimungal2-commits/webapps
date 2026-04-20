@@ -4,7 +4,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="GameFG.game" %>
 <%@ page import="GameFG.cart" %>
-<%@ page import="javax.servlet.http.HttpSession" %>
+
 
 
 <%
@@ -36,9 +36,6 @@ while (rs.next()) {
      <link rel="stylesheet" href="navbar.css">
      <link rel="stylesheet" type="text/css" href="index.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-     
-     
-
 
     </head>
 
@@ -87,13 +84,13 @@ while (rs.next()) {
                         <div class = "game-info">
                         <div class="groupbuttons">
                         <p>
-                            <form action ="AddToCartServlet" method ="post">
+                            <form action ="addToCart.jsp" method ="post">
                                 <input type="hidden"  name="gameID"  value="<%= ids.get(i)%>">
                             <button class="cart-button"><i class="fas fa-cart-plus"></i></button>
 
                             </form>
 
-                            <form action ="BuyNowServlet" method ="post">
+                            <form action ="buyNow.jsp" method ="post">
                             <input type="hidden" name="gameID" value="<%= ids.get(i) %>">
                             <button class="buy-button">BUY NOW</button>
                             </form>
@@ -164,7 +161,7 @@ function updateDisplay() {
         
         setTimeout(() => {
              updateSideImages();
-        }, 1000); // fade out after 4 seconds
+        }, 5000); // fade out after 5 seconds
        
     }, 300);
 }

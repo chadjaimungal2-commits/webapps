@@ -13,15 +13,16 @@
                 <div class="nav-links">
                     <a href="index.jsp" class="nav-link">Home</a>
                     <a href="Categories.jsp" class="nav-link">Games</a>
+                    <a href="discover.jsp" class="nav-link">Discover</a>
                     <a href="Contact us.jsp" class="nav-link">Contact Us</a>
                     <a href="About Us.jsp" class="nav-link">About Us</a>
                 </div>
                     
                        
 
-                
+                        <form action ="SearchRS.jsp" method="get" >
                         <input type="text" placeholder="Search For Your Next Game..." class="search-bar">
-
+                        </form>
                         <a href="Login.jsp">
                         <button class="login-button">Login</button>
                         </a>
@@ -32,14 +33,14 @@
                         <button class="cart-button"><i class="fas fa-cart-plus"></i></button>
                         </a>
                         <a href="Profile.jsp">
-                        <button class="profile-button"><i class="fa-solid fa-user"></i></button>
+                        <button class="profile-button"><i class="fas fa-user"></i></button>
                         </a>
-
+                
                         
                 
 
             </nav>
-            
+
 
         
        

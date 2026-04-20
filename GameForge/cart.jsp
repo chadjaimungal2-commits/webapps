@@ -1,6 +1,9 @@
 <%@ page import="java.util.*" %>
 <%@ page import="GameFG.cart" %>
-<%@ page import="GameFG.game" %>
+<%@ page import ="GameFG.DBConnect" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.ArrayList" %>
+
 
 <html>
 <head>  
@@ -90,29 +93,47 @@
                 </tr>
 
                 
+                
                 <%
+                     DBConnect db= new DBConnect();
+                    Connection conn = db.getConnection();
                     List<Integer> cart = (List<Integer>) session.getAttribute("cart");
-                    double total = 0;
-
+                     double total = 0.0;
                     if (cart != null && !cart.isEmpty()) {
 
                         for (Integer gameId : cart) {
-                            game g = GameDAO.getGameById(gameId);       
-                            total += g.getGamePrice();
+                             
+
+                             
+
+                                PreparedStatement ps = conn.prepareStatement("SELECT * FROM Game WHERE GameID = ?");
+                                ps.setInt(1, gameId);
+                                ResultSet rs = ps.executeQuery();
+                                    if ( rs.next()) {
+                                        String Title = rs.getString ("Title");
+                                        double Price = rs.getDouble("Price");
+                                    
+                                        total = total + Price;
+
+
+                  
+                               
+                            
                 %>
 
                 <tr>
-                    <td><%= g.getGameTitle() %></td>
-                    <td>$<%= g.getGamePrice() %></td>
+                    <td><%= Title %></td>
+                    <td>$<%= Price %></td>
                     <td>
-                        <form action="RemoveFromCartServlet" method="post">
-                            <input type="hidden" name="gameId" value="<%= g.getGameID() %>">
+                        <form action="RemoveFromCart.jsp" method="post">
+                            <input type="hidden" name="gameId" value="<%= gameId %>">
                             <button class="remove-btn">Remove</button>
                         </form>
                     </td>
                 </tr>
 
                 <%
+                          }   
                         }
                     } else {
                 %>
@@ -131,7 +152,7 @@
                 Total: $<%= total %>
             </div>
 
-            <form action="CheckoutServlet" method="post">
+            <form action="Checkout.jsp" method="post">
                 <button class="checkout-btn">Checkout</button>
             </form>
 

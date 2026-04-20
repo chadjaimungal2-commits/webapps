@@ -2,6 +2,36 @@
 <%@ page import="GameFG.loginService"%>    
 <%@ page import="GameFG.DBConnect"%>
 
+<% 
+    if (request.getMethod().equalsIgnoreCase("POST")) {
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+
+    Connection conn = DBConnect.getConnection();
+    PreparedStatment ps = conn.prepareStatement("SELECT * FROM users WHERE username = ? AND password = ?");
+    ps.setString(1, username);
+    ps.setString(2, password);
+    ResultSet rs = ps.executeQuery();
+
+    if (rs.next()) {
+        String role = rs.getString("role");
+        session.setAttribute("user", username);
+        session.setAttribute("role", role);
+
+        if role.equals("admin") {
+            response.sendRedirect("admin.jsp");
+        } else {
+            response.sendRedirect("index.jsp");
+        }
+    
+    
+     } %>
+
+    }
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>

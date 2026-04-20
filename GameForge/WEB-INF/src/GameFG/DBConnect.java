@@ -14,7 +14,7 @@ public class DBConnect {
 				conn = DriverManager.getConnection(
 								"jdbc:mysql://localhost:3306/GameForge?autoReconnect=true&useSSL=false",
 								"root",
-							"Mustang7200!"
+							"mysql"
 						);
     		}
 			catch (Exception e) {
@@ -22,7 +22,7 @@ public class DBConnect {
 			}
   		}
 
-  	}//end constructor
+  	}
 	public Connection getConnection() {
 		return conn;
 	}
